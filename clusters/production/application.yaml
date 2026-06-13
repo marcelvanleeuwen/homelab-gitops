@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/marcelvanleeuwen/homelab-gitops.git
     targetRevision: main
-    path: apps
+    path: clusters/production/apps
 
   destination:
     server: https://kubernetes.default.svc
