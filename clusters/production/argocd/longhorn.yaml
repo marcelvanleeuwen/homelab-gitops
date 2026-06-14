@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/marcelvanleeuwen/homelab-gitops.git
     targetRevision: main
-    path: clusters/production/infrastructure/longhorn
+    path: ../infrastructure/longhorn
 
   destination:
     server: https://kubernetes.default.svc
