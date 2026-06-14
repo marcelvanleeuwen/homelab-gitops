@@ -1,23 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: homelab-gitops
+  name: homelab-private
   namespace: argocd
 spec:
   project: default
-
   source:
-    repoURL: https://github.com/marcelvanleeuwen/homelab-gitops.git
+    repoURL: https://github.com/marcelvanleeuwen/homelab-private.git
     targetRevision: main
-    path: clusters/production/apps
-
+    path: apps
   destination:
     server: https://kubernetes.default.svc
     namespace: apps
-
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
