@@ -5,16 +5,25 @@ metadata:
   namespace: argocd
 spec:
   project: default
+
   source:
     repoURL: https://charts.longhorn.io
     chart: longhorn
-    targetRevision: 1.9.1
+    targetRevision: 1.11.2
+
+    helm:
+      values: |
+        defaultSettings:
+          defaultReplicaCount: 2
+
   destination:
     server: https://kubernetes.default.svc
     namespace: longhorn-system
+
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+
     syncOptions:
       - CreateNamespace=true
