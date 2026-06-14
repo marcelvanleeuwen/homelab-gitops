@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/marcelvanleeuwen/homelab-gitops.git
-    targetRevision: main
-    path: clusters/production/infrastructure/longhorn
+    repoURL: https://charts.longhorn.io
+    chart: longhorn
+    targetRevision: 1.9.1
   destination:
     server: https://kubernetes.default.svc
     namespace: longhorn-system
