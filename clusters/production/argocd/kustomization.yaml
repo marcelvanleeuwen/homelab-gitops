@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - longhorn-application.yaml
+  - metallb-application.yaml
