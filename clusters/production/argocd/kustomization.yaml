@@ -4,3 +4,11 @@ kind: Kustomization
 resources:
   - longhorn-application.yaml
   - metallb-application.yaml
+  - metallb-config-application.yaml
+
+patches:
+  - path: argocd-serverlb-patch.yaml
+    target:
+      kind: Service
+      name: argocd-server
+      namespace: argocd
