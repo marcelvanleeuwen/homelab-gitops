@@ -14,7 +14,7 @@ patches:
       name: argocd-server
       namespace: argocd
 
-  - path: argocd-cm-patch.yaml
+  - path: argocd-reconcil-patch.yaml
     target:
       version: v1
       kind: ConfigMap
