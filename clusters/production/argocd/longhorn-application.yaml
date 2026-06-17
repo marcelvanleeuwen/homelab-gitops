@@ -6,18 +6,21 @@ metadata:
 spec:
   project: default
 
-  source:
-    repoURL: https://charts.longhorn.io
-    chart: longhorn
-    targetRevision: 1.12.0
-
-    helm:
+  sources:
+    - repoURL: https://charts.longhorn.io
+      chart: longhorn
+      targetRevision: 1.12.0
+      helm:
       valueFiles:
-	- $values/clusters/production/longhorn/values.yaml
-
+    - $values/clusters/production/longhorn/values.yaml
+   
+    - repoURL: git@github.com:marcelvanleeuwen/homelab-gitops.git
+      targetRevision: main
+      ref: values
+     
   destination:
-    server: https://kubernetes.default.svc
-    namespace: longhorn-system
+      server: https://kubernetes.default.svc
+      namespace: longhorn-system
 
   syncPolicy:
     automated:
