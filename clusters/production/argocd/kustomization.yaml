@@ -5,7 +5,7 @@ resources:
   - longhorn-application.yaml
   - metallb-application.yaml
   - metallb-config-application.yaml
-  - argo-reconcil-application.yaml
+  - argocd-reconcil-application.yaml
 
 patches:
   - path: argocd-serverlb-patch.yaml
