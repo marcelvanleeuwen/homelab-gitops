@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-reconcil
+  namespace: argocd
+data:
+  timeout.reconciliation: 180s
