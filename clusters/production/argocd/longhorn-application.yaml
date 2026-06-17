@@ -9,12 +9,12 @@ spec:
   source:
     repoURL: https://charts.longhorn.io
     chart: longhorn
-    targetRevision: 1.11.2
+    targetRevision: 1.12
 
     helm:
       values: |
         defaultSettings:
-          defaultReplicaCount: 2
+          defaultReplicaCount: 1
 
   destination:
     server: https://kubernetes.default.svc
