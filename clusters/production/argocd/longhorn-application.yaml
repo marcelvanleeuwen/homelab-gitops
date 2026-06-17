@@ -11,16 +11,16 @@ spec:
       chart: longhorn
       targetRevision: 1.12.0
       helm:
-      valueFiles:
-    - $values/clusters/production/longhorn/values.yaml
-   
+        valueFiles:
+          - $values/clusters/production/longhorn/values.yaml
+
     - repoURL: git@github.com:marcelvanleeuwen/homelab-gitops.git
       targetRevision: main
       ref: values
-     
+
   destination:
-      server: https://kubernetes.default.svc
-      namespace: longhorn-system
+    server: https://kubernetes.default.svc
+    namespace: longhorn-system
 
   syncPolicy:
     automated:
